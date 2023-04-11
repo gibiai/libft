@@ -6,7 +6,7 @@
 /*   By: gde-carl <gde-carl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/07 02:10:09 by gde-carl          #+#    #+#             */
-/*   Updated: 2023/04/11 18:48:45 by gde-carl         ###   ########.fr       */
+/*   Updated: 2023/04/11 19:08:34 by gde-carl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-	if (!del)
+	if (lst == NULL || del == NULL)
 		return ;
-	if (!lst)
-		return ;
-	(*del)(lst->content);
+	del(lst->content);
+	lst->content = NULL;
 	free(lst);
 }
