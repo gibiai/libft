@@ -6,7 +6,7 @@
 #    By: gde-carl <gde-carl@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/04 15:47:29 by gde-carl          #+#    #+#              #
-#    Updated: 2023/04/07 18:48:20 by gde-carl         ###   ########.fr        #
+#    Updated: 2023/04/11 17:19:09 by gde-carl         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 NAME 	= libft.a
@@ -34,7 +34,7 @@ RM		= rm -f
 FLAGS	= -Wall -Wextra -Werror
 
 .c.o:
-	${CC} ${FLAGS} -g -c $< -o $@
+		${CC} ${FLAGS} -g -c $< -o $@
 
 $(NAME): $(OBJS)
 		ar rcs ${NAME} ${OBJS}
@@ -48,7 +48,7 @@ clean:
 		${RM} ${OBJS} ${OBJ_B} 
 
 fclean: clean
-	${RM} ${NAME}
+		${RM} ${NAME}
 
 re: fclean all
 

@@ -6,7 +6,7 @@
 /*   By: gde-carl <gde-carl@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/30 16:08:36 by gde-carl          #+#    #+#             */
-/*   Updated: 2023/04/06 20:26:48 by gde-carl         ###   ########.fr       */
+/*   Updated: 2023/04/11 18:46:40 by gde-carl         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	char	*str;
-
-	str = (char *)s;
-	while (*str != c)
+	while (*s != (char)c)
 	{
-		if (!*str++)
+		if (!*s++)
 			return (NULL);
 	}
-	return ((char *)str);
+	return ((char *)s);
 }
